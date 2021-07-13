@@ -9,7 +9,128 @@
 </head>
 <body>
     <div class="cv-wrp">
+        <header class="header">
+            <div class="wrp">
+                <img class="photo" src="images/photo.jpeg" alt="Photo" width="50" height="50">
+                <div class="wrp">
+                    <h1 title="Кузьменко Алиса">Kuzmenko Alice</h1>
+                    <p class=job-title>Frontend developer</p> 
+                </div>
+            </div>
+            
+            <ul class="contacts">
+                <li class="contacts-item"><a href="">komalapa@gmail.com</a></li>
+                <li class="contacts-item"><a href="">@komalapa</a></li>
+                <li class="contacts-item"><a href="">Samara</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="wrp left-side">
+                <section class="experience">
+                    <h2 class="section-header">Work experience</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item"></li>
+                    </ul>
+                </section>
+                <section class="education">
+                    <h2 class="section-header">Education</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item"></li>
+                    </ul>
+                </section>
+                <section class="interests">
+                    <h2 class="section-header">Interests</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item">Frontend (HTML\CSS\JS)</li>
+                        <li class="section-list-item">English language</li>
+                        <li class="section-list-item">Weaving and textile</li>
+                    </ul>
+                </section>
+                <section class="languages">
+                    <h2 class="section-header">Languages</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item"><span class="bold">Russian</span> - native</li>
+                        <li class="section-list-item"><span class="bold">English</span> - B1 </li>
+                        <li class="section-list-item">Weaving and textile</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="wrp right-side">
+                <section class="skills">
+                    <h2 class="section-header">Technical skills</h2>
+                    <h3>HTML</h3>
+                    <p class="skills-dscr">Semantic layout, validity</p>
+                    <h3>CSS</h3>
+                    <p class="skills-dscr">BEM, SCSS</p>
+                    <h3>JS</h3>
+                    <p class="skills-dscr">JS and frameworks Vue.js and React</p>
+                    <h3>Network</h3>
+                    <p class="skills-dscr">basic understanding </p>
+                    
+                </section>
+                <section class="trainings">
+                    <h2 class="section-header">Trainings</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item">GeekBrains, Frontend-разработчик (GeekBrains, 2020)</li>
+                        <li class="section-list-item">KL-002.10 "Kaspersky Endpoint Security and Management. Базовый курс" (Softline, 2014)</li>
+                        <li class="section-list-item">Погружение в Python (Coursera, 2018)</li>
+                        
+                    </ul>
+                </section>
+                <section class="interests">
+                    <h2 class="section-header">Interests</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item">Frontend (HTML\CSS\JS)</li>
+                        <li class="section-list-item">English language</li>
+                        <li class="section-list-item">Weaving and textile</li>
+                    </ul>
+                </section>
+            </div>
+            <section class="code-examples">
+                <h2 class="section-heder">Code examples</h2>
 
+                <h3>Codewars: sum long numbers</h3>
+
+                <pre>
+const toDigits = (str, length) =&gt; ('0'.repeat(length - str.length) + str).split('').map(n =&gt; +n);
+
+function sumStrings(a,b) { 
+    let sumArr = toDigits('',a.length &gt; b.length ? a.length+1 : b.length+1);
+    const aArr = toDigits(a, sumArr.length);
+    const bArr = toDigits(b, sumArr.length);
+  
+    for (let i=1; i&lt;sumArr.length; i++){
+        sumArr[sumArr.length -i] = sumArr[sumArr.length -i] + aArr[aArr.length -i] + bArr[bArr.length -i];
+        if (sumArr[sumArr.length -i] &gt; 9){
+            sumArr[sumArr.length -i] -= 10;
+            sumArr[sumArr.length -i -1] = 1 + sumArr[sumArr.length -i -1] ;
+        }
+    }
+  
+    const sum = sumArr.join('').replace(/^0+/, '');
+  
+    return sum
+}
+                </pre>
+
+
+
+
+                <h3>Codewars: formatting date</h3> 
+
+                <pre>
+const format = n =&gt; n &lt; 10 ? "0"+ n : n
+
+function humanReadable(seconds) {
+    const h = Math.floor(seconds/3600);
+    const m = Math.floor(seconds/60)%60;
+    const s = seconds%60;
+    return `${format(h)}:${format(m)}:${format(s)}`
+}
+                </pre>
+            </section>
+        </main>
+        <footer></footer>
     </div>
 </body>
 </html>

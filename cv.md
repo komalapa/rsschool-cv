@@ -50,6 +50,7 @@ function sumStrings(a,b) {
   
   return sum
 }
+
 ```
 2. Codewars: formatting date
 

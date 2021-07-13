@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="fonts/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <title>CV</title>
 </head>
 <body>
     <div class="cv-wrp">
         <header class="header">
-            <div class="wrp">
-                <img class="photo" src="images/photo.jpeg" alt="Photo" width="50" height="50">
-                <div class="wrp">
+            <div class="wrp flex-row">
+                <div class="photo"></div>
+                <div class="wrp flex-column space-between">
                     <h1 title="Кузьменко Алиса">Kuzmenko Alice</h1>
                     <p class=job-title>Frontend developer</p> 
                 </div>
             </div>
             
-            <ul class="contacts">
-                <li class="contacts-item"><a href="">komalapa@gmail.com</a></li>
-                <li class="contacts-item"><a href="">@komalapa</a></li>
-                <li class="contacts-item"><a href="">Samara</a></li>
+            <ul class="contacts flex-row">
+                <li class="contacts-item"><a href=""><span class="icon icon-envelope-o"></span> komalapa@gmail.com</a></li>
+                <li class="contacts-item"><a href=""><span class="icon icon-paper-plane"></span> @komalapa</a></li>
+                <li class="contacts-item"><a href=""><span class="icon icon-map-marker"></span> Samara</a></li>
             </ul>
         </header>
         <main>

@@ -50,6 +50,9 @@ pre{
     justify-content: space-between;
 }
 
+.align-center{
+    align-items: center;
+}
 .bold{
     font-weight: bold;
 }
@@ -176,3 +179,24 @@ pre{
     left:-19px
 }
 
+
+.github-link{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.course-link:hover img,.course-link:active img, .github-link:hover{
+    transform: scale(1.2);
+}
+.course-link:active{
+    transform: translate(2px, 1px);
+}
+.github-link:active{
+    transform: scale(1.2) translate(2px, 1px);;
+}
+.footer-date{
+    font-weight: bold;
+    color: var(--black);    
+}

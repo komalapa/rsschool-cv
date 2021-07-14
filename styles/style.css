@@ -25,6 +25,14 @@ h1{
     margin: 0;
 }
 
+h3{
+    margin-left:20px;
+}
+
+pre{
+    margin: 20px;
+}
+
 .flex-row{
     display:flex;
     flex-direction: row;
@@ -40,6 +48,10 @@ h1{
 }
 .space-between{
     justify-content: space-between;
+}
+
+.bold{
+    font-weight: bold;
 }
 .cv-wrp{
     width:595px;
@@ -129,3 +141,38 @@ h1{
     margin:0;
     padding: 25px 30px 20px;
 }
+
+.section-list{
+    list-style-type: none;
+    padding: 8px;
+    position: relative;
+}
+
+.section-list:before{
+    display: block;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, #7AB9C3 0%, rgba(122, 185, 195, 0) 100%);
+    position: absolute;
+    left: -8px;
+}
+.section-list-item{
+    margin:5px 0;
+    position: relative;
+}
+.section-list-item:first-child{
+    margin-top: 0;
+}
+.section-list-item:before{
+    display: block;
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #7AB9C3;
+    border: 2px solid #D5E6E8;
+    position: absolute;
+    left:-19px
+}
+

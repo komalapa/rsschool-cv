@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="fonts/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>CV</title>
+</head>
+<body>
+    <div class="cv-wrp">
+        <header class="header">
+            <div class="wrp flex-row">
+                <div class="photo"></div>
+                <div class="wrp flex-column space-between">
+                    <h1 title="Кузьменко Алиса">Kuzmenko Alice</h1>
+                    <p class=job-title>Frontend developer</p> 
+                </div>
+            </div>
+            
+            <ul class="contacts flex-row">
+                <li class="contacts-item"><a href=""><span class="icon icon-envelope-o"></span> komalapa@gmail.com</a></li>
+                <li class="contacts-item"><a href=""><span class="icon icon-paper-plane"></span> @komalapa</a></li>
+                <li class="contacts-item"><a href=""><span class="icon icon-map-marker"></span> Samara</a></li>
+            </ul>
+        </header>
+        <main class="flex-row flex-wrap">
+            <div class="wrp left-side">
+                <section class="experience section">
+                    <h2 class="section-header">Work experience</h2>
+                    <ul class="section-list section-list-line">
+                        <li class="section-list-item"><span class="bold">PAO Sberbank</span>  (09.2019-04.2020)Technical support engineer</li>
+                        <li class="section-list-item"><span class="bold">UK Electroshield - Samara</span> (12.2013-09.2015)System administrator</li>
+                        <li class="section-list-item"><span class="bold">Byte-Samara</span> (08.2012-12.2013)Intern, System administrator</li>
+                    </ul>
+                </section>
+                <section class="education section">
+                    <h2 class="section-header">Education</h2>
+                    <p><span class="bold">SSAU</span>, Information security, Samara 2013</p>   
+                </section>
+
+                <section class="languages section">
+                    <h2 class="section-header">Languages</h2>
+                        <p><span class="bold">Russian</span> - native</p>
+                        <p><span class="bold">English</span> - B1 </p>
+                </section>
+
+                <section class="interests section">
+                    <h2 class="section-header">Interests</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item">Frontend (HTML\CSS\JS)</li>
+                        <li class="section-list-item">JS (node.js\React\Vue.js)</li>
+                        <li class="section-list-item">English language</li>
+                        <li class="section-list-item">Weaving and handiwork</li>
+                    </ul>
+                </section>
+
+            </div>
+            <div class="wrp right-side">
+                <section class="about section">
+                    <h2 class="section-header">About</h2>
+                    <p>I worked as technical support engineer for a long time. But now I want to change my profession. Now I don't work by personal reasons and spend free time learning Frontend development.
+                        I hope that I will be able to find a job in the Frontend development this year.</p>                    
+                </section>
+                <section class="skills section">
+                    <h2 class="section-header">Technical skills</h2>
+                    <h3>HTML</h3>
+                    <p class="skills-dscr">Semantic layout, validity</p>
+                    <h3>CSS</h3>
+                    <p class="skills-dscr">BEM, SCSS</p>
+                    <h3>JS</h3>
+                    <p class="skills-dscr">JS and frameworks Vue.js and React</p>
+                    <h3>Network, Windows, Linux</h3>
+                    <p class="skills-dscr">basic understanding and skills </p>
+                    
+                </section>
+                <section class="trainings section">
+                    <h2 class="section-header">Trainings</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item"><span class="bold">GeekBrains, Frontend-разработчик</span> (GeekBrains, 2020)</li>
+                        <li class="section-list-item"><span class="bold">KL-002.10 "Kaspersky Endpoint Security and Management. Базовый курс"</span> (Softline, 2014)</li>
+                        <li class="section-list-item"><span class="bold">Погружение в Python (Coursera, 2018)</span></li>
+                        
+                    </ul>
+                </section>
+
+            </div>
+            <section class="code-examples">
+                <h2 class="section-heder code-header">Code examples</h2>
+
+                <h3>Codewars: sum long numbers</h3>
+
+                <pre><code>
+const toDigits = (str, length) =&gt; 
+    ('0'.repeat(length - str.length) + 
+    str).split('').map(n =&gt; +n);
+
+function sumStrings(a,b) { 
+    let sumArr = toDigits('',a.length &gt; b.length ? a.length+1 : b.length+1);
+    const aArr = toDigits(a, sumArr.length);
+    const bArr = toDigits(b, sumArr.length);
+  
+    for (let i=1; i&lt;sumArr.length; i++){
+        sumArr[sumArr.length -i] = sumArr[sumArr.length -i] 
+                                    + aArr[aArr.length -i] 
+                                    + bArr[bArr.length -i];
+        if (sumArr[sumArr.length -i] &gt; 9){
+            sumArr[sumArr.length -i] -= 10;
+            sumArr[sumArr.length -i -1] = 1 + sumArr[sumArr.length -i -1];
+        }
+    }
+  
+    const sum = sumArr.join('').replace(/^0+/, '');
+  
+    return sum
+}
+                </code></pre>
+
+
+
+
+                <h3>Codewars: formatting date</h3> 
+
+                <pre><code>
+const format = n =&gt; n &lt; 10 ? "0"+ n : n
+
+function humanReadable(seconds) {
+    const h = Math.floor(seconds/3600);
+    const m = Math.floor(seconds/60)%60;
+    const s = seconds%60;
+    return `${format(h)}:${format(m)}:${format(s)}`
+}
+        </code></pre>
+            </section>
+        </main>
+        <footer class="flex-row space-between align-center">
+            <a class="course-link" href="https://rs.school/js/" target="_blank" title="Курс «JavaScript/Front-end»"><img src="images/rs_school_js.svg" alt="RS school logo" height="40"></a> 
+            <a class="github-link" href="https://github.com/komalapa" target="_blank">github: komalapa</a>
+            <time class="footer-date" datetime="2021-07-14">14-07-2021</time>
+        </footer>
+    </div>
+</body>
+</html>

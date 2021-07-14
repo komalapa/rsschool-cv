@@ -33,15 +33,26 @@
                 <section class="experience section">
                     <h2 class="section-header">Work experience</h2>
                     <ul class="section-list">
-                        <li class="section-list-item"></li>
+                        <li class="section-list-item"><span class="bold">PAO Sberbank</span>  (09.2019-04.2020)Technical support engineer</li>
+                        <li class="section-list-item"><span class="bold">UK Electroshield - Samara</span> (12.2013-09.2015)System administrator</li>
+                        <li class="section-list-item"><span class="bold">Byte-Samara</span> (08.2012-12.2013)Intern, System administrator</li>
                     </ul>
                 </section>
                 <section class="education section">
                     <h2 class="section-header">Education</h2>
                     <ul class="section-list">
-                        <li class="section-list-item"></li>
+                        <li class="section-list-item"><span class="bold">SSAU</span>, Information security, Samara 2013</li>
                     </ul>
                 </section>
+
+                <section class="languages section">
+                    <h2 class="section-header">Languages</h2>
+                    <ul class="section-list">
+                        <li class="section-list-item"><span class="bold">Russian</span> - native</li>
+                        <li class="section-list-item"><span class="bold">English</span> - B1 </li>
+                    </ul>
+                </section>
+
                 <section class="interests section">
                     <h2 class="section-header">Interests</h2>
                     <ul class="section-list">
@@ -50,14 +61,7 @@
                         <li class="section-list-item">Weaving and textile</li>
                     </ul>
                 </section>
-                <section class="languages section">
-                    <h2 class="section-header">Languages</h2>
-                    <ul class="section-list">
-                        <li class="section-list-item"><span class="bold">Russian</span> - native</li>
-                        <li class="section-list-item"><span class="bold">English</span> - B1 </li>
-                        <li class="section-list-item">Weaving and textile</li>
-                    </ul>
-                </section>
+
             </div>
             <div class="wrp right-side">
                 <section class="skills section">
@@ -81,22 +85,17 @@
                         
                     </ul>
                 </section>
-                <section class="interests section">
-                    <h2 class="section-header">Interests</h2>
-                    <ul class="section-list">
-                        <li class="section-list-item">Frontend (HTML\CSS\JS)</li>
-                        <li class="section-list-item">English language</li>
-                        <li class="section-list-item">Weaving and textile</li>
-                    </ul>
-                </section>
+
             </div>
             <section class="code-examples">
                 <h2 class="section-heder code-header">Code examples</h2>
 
                 <h3>Codewars: sum long numbers</h3>
 
-                <pre>
-const toDigits = (str, length) =&gt; ('0'.repeat(length - str.length) + str).split('').map(n =&gt; +n);
+                <pre><code>
+const toDigits = (str, length) =&gt; 
+    ('0'.repeat(length - str.length) + 
+    str).split('').map(n =&gt; +n);
 
 function sumStrings(a,b) { 
     let sumArr = toDigits('',a.length &gt; b.length ? a.length+1 : b.length+1);
@@ -104,10 +103,12 @@ function sumStrings(a,b) {
     const bArr = toDigits(b, sumArr.length);
   
     for (let i=1; i&lt;sumArr.length; i++){
-        sumArr[sumArr.length -i] = sumArr[sumArr.length -i] + aArr[aArr.length -i] + bArr[bArr.length -i];
+        sumArr[sumArr.length -i] = sumArr[sumArr.length -i] 
+                                    + aArr[aArr.length -i] 
+                                    + bArr[bArr.length -i];
         if (sumArr[sumArr.length -i] &gt; 9){
             sumArr[sumArr.length -i] -= 10;
-            sumArr[sumArr.length -i -1] = 1 + sumArr[sumArr.length -i -1] ;
+            sumArr[sumArr.length -i -1] = 1 + sumArr[sumArr.length -i -1];
         }
     }
   
@@ -131,7 +132,7 @@ function humanReadable(seconds) {
     const s = seconds%60;
     return `${format(h)}:${format(m)}:${format(s)}`
 }
-                </pre>
+        </code></pre>
             </section>
         </main>
         <footer></footer>

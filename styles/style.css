@@ -66,10 +66,46 @@ pre{
     width: 60%;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
     border: none;
     border-left: 5px double var(--main-color);
     border-right: 5px double var(--main-color);
 }
+
+.section-list{
+    list-style-type: none;
+    padding: 8px;
+    position: relative;
+}
+
+.section-list:before{
+    display: block;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, #7AB9C3 0%, rgba(122, 185, 195, 0) 100%);
+    position: absolute;
+    left: -8px;
+}
+.section-list-item{
+    margin:5px 0;
+    position: relative;
+}
+.section-list-item:first-child{
+    margin-top: 0;
+}
+.section-list-item:before, .skills-dscr li:before{
+    display: block;
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #7AB9C3;
+    border: 2px solid #D5E6E8;
+    position: absolute;
+    left:-19px
+}
+
 .header{
     max-width:100%;
     background-color:var(--main-color);
@@ -126,6 +162,10 @@ pre{
     top: 2px;
 }
 
+.columns-wrp{
+    padding: 0;
+}
+
 .left-side, .right-side {
     width:50%
   }
@@ -133,6 +173,25 @@ pre{
 .right-side{
     background-color: var(--light-background);
 }
+
+.skills-list{
+    list-style: none;
+    padding: 0;
+}
+
+.skills-dscr{
+    list-style: none;
+}
+
+.skills-dscr li{
+    position: relative;
+}
+
+.skills-dscr li:before{
+    top: 2px;
+    left: -10px;
+}
+
 
 .projects{
     max-width: 100%;
@@ -246,39 +305,7 @@ pre{
     box-sizing: border-box;
 }
 
-.section-list{
-    list-style-type: none;
-    padding: 8px;
-    position: relative;
-}
 
-.section-list:before{
-    display: block;
-    content: '';
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg, #7AB9C3 0%, rgba(122, 185, 195, 0) 100%);
-    position: absolute;
-    left: -8px;
-}
-.section-list-item{
-    margin:5px 0;
-    position: relative;
-}
-.section-list-item:first-child{
-    margin-top: 0;
-}
-.section-list-item:before{
-    display: block;
-    content: '';
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: #7AB9C3;
-    border: 2px solid #D5E6E8;
-    position: absolute;
-    left:-19px
-}
 
 
 .github-link{

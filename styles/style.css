@@ -32,6 +32,7 @@ h3{
 
 pre{
     margin: 20px;
+    overflow-x:auto;
 }
 
 .flex-row{
@@ -213,7 +214,7 @@ pre{
     position: relative;
     overflow: hidden;
     min-width: 400px;
-    height: 205px;
+    min-height: 205px;
 }
 .slider-item-img{
     display: block;
@@ -327,4 +328,60 @@ pre{
 .footer-date{
     font-weight: bold;
     color: var(--black);    
+}
+
+@media (max-width: 1000px){
+    .projects .slider-wrp{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .projects-slider{
+        width: fit-content;
+        flex-direction: column;
+        height: 450px;
+        overflow-x: initial;
+        overflow-y: scroll;
+    }
+    .slider-arrow-left{
+        width: 0;
+        height: 0;
+        border-right: 100px solid transparent;
+        border-bottom: 50px solid #555;
+        border-left: 100px solid transparent;
+        margin-bottom: 20px;
+        margin-top: -100px;
+    }
+    .slider-arrow-right{
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-top: 50px solid #555;
+        border-right: 100px solid transparent;
+        margin-top: 20px;
+        margin-bottom: -100px;
+    }
+}
+
+@media (max-width: 700px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .columns-wrp{
+        flex-direction: column;
+        align-items: center;
+    }
+    .columns-wrp > div{
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .block-wrp{
+        margin: 0 auto;
+        width: 90%;
+    }
 }

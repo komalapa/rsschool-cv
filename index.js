@@ -60,7 +60,7 @@ window.addEventListener('resize', ()=>{ //reinit slider on window resize
     scrollSlider(0)
 })
 
-// const menu = document.querySelector('.menu')
+const menu = document.querySelector('.menu')
 // const headerHeight = 200;
 // window.addEventListener('scroll', () => {
 //     console.log(window.scrollY)
@@ -70,3 +70,13 @@ window.addEventListener('resize', ()=>{ //reinit slider on window resize
 //         menu.classList.remove("fixed-menu")
 //     }
 // })
+
+const burgerBtn = document.querySelector("#burger");
+
+burgerBtn.addEventListener('input', ()=>{
+    if (burgerBtn.checked){
+        menu.classList.add("menu-burger")
+    } else {
+        menu.classList.remove("menu-burger")
+    }
+})

@@ -209,6 +209,11 @@ pre{
 .menu-list-item a:hover{
     text-decoration: underline;
 }
+
+.burger-checkbox{
+    display: none;
+}
+
 .icon{
     padding: 0 2px;
     position: relative;
@@ -274,6 +279,11 @@ pre{
     min-width: 400px;
     min-height: 205px;
 }
+
+.slider-item a{
+    text-decoration: none;
+}
+
 .slider-item-img{
     display: block;
 }
@@ -470,6 +480,7 @@ pre{
         position: absolute;
         top:0;
         left:0;
+        display: block;
         width: 40px;
         height: 40px;
         opacity: 0;

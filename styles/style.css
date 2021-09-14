@@ -456,3 +456,14 @@ pre{
         width: 90%;
     }
 }
+
+@media (max-width: 410px){
+    .slider-item{
+        min-width: 300px;
+        min-height: 155px;
+        width: 300px;
+    }
+    .slider-item-img{
+        align-items: center;
+    }
+}

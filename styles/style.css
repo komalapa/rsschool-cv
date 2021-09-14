@@ -6,7 +6,12 @@
     --black:rgba(34, 34, 34, 0.8);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
+    /* position: relative; */
     margin:0;
     padding:0;
     font-family: Inter, sans-serif;
@@ -14,7 +19,7 @@ body{
     font-size: 10px;
     line-height: 12px;
     color: var(--black);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 h1{
@@ -59,9 +64,11 @@ pre{
     font-weight: bold;
 }
 .cv-wrp{
-    width:100vw;
+    /* width:100vw; */
     background-color: var(--main-background);
     margin: 0 auto;
+    min-height: 100vh;
+    height: max-content;
 }
 .block-wrp{
     width: 60%;
@@ -113,7 +120,7 @@ pre{
     box-sizing: border-box;
 }
 .header-wrp{
-    padding: 25px 30px 20px;
+    padding: 25px 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,6 +165,50 @@ pre{
     color: var(--main-background);
 }
 
+.menu{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    background-color: var(--main-color);
+    /* border-top: 5px double var(--white); */
+    z-index: 10;
+
+}
+
+/* .fixed-menu{
+    position: fixed;
+    z-index: 10;
+    top:0;
+    width: 100%;
+    background-color: var(--main-color);
+} */
+
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-list-item{
+    padding: 0;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-list-item a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu-list-item a:hover{
+    text-decoration: underline;
+}
 .icon{
     padding: 0 2px;
     position: relative;
@@ -294,7 +345,7 @@ pre{
 }
 
 .section{
-    margin:22px;
+    padding: 30px 22px 0;
 }
 
 .section-header{
@@ -389,6 +440,13 @@ pre{
     .columns-wrp > div{
         margin: 0;
         width: 100%;
+    }
+}
+
+@media (max-width: 650px){
+    /* burger on*/
+    .menu{
+        display: none;
     }
 }
 

@@ -59,3 +59,14 @@ window.addEventListener('resize', ()=>{ //reinit slider on window resize
     slider.scrollTop = 0;
     scrollSlider(0)
 })
+
+// const menu = document.querySelector('.menu')
+// const headerHeight = 200;
+// window.addEventListener('scroll', () => {
+//     console.log(window.scrollY)
+//     if (window.scrollY > headerHeight) {
+//         menu.classList.add("fixed-menu")
+//     } else {
+//         menu.classList.remove("fixed-menu")
+//     }
+// })

@@ -396,6 +396,10 @@ pre{
     text-align: justify;
     line-height: 1;
 }
+.video-transcription p::first-letter{
+    font-size: 18px;
+    color: var(--main-color);
+}
 .github-link{
     text-decoration: none;
     font-size: 15px;

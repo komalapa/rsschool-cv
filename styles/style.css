@@ -131,7 +131,7 @@ pre{
     height: 50px;
     border-radius: 50%;
     background:center / 100% no-repeat url("../images/photo.jpeg") ;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 
 .job-title{
@@ -209,6 +209,11 @@ pre{
 .menu-list-item a:hover{
     text-decoration: underline;
 }
+
+.burger-checkbox{
+    display: none;
+}
+
 .icon{
     padding: 0 2px;
     position: relative;
@@ -274,6 +279,11 @@ pre{
     min-width: 400px;
     min-height: 205px;
 }
+
+.slider-item a{
+    text-decoration: none;
+}
+
 .slider-item-img{
     display: block;
 }
@@ -356,7 +366,7 @@ pre{
     color: var(--main-color);
 }
 
-.code-header, footer{
+.code-header, footer, .video{
     background-color: var(--main-color);
     color: var(--white);
     margin:0;
@@ -364,9 +374,28 @@ pre{
     box-sizing: border-box;
 }
 
+.video .section-header{
+    color: var(--white);
+    font-size: 32px;
+}
 
+.video-iframe{
+    width: 60vw;
+    height: 34vw;
+    margin-bottom: 35px;
+}
 
-
+.video-transcription .section-header{
+    font-size: 32px;
+    text-align: center;
+    line-height: 1;
+    word-wrap:unset;
+}
+.video-transcription p{
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1;
+}
 .github-link{
     text-decoration: none;
     font-size: 15px;
@@ -470,6 +499,7 @@ pre{
         position: absolute;
         top:0;
         left:0;
+        display: block;
         width: 40px;
         height: 40px;
         opacity: 0;
@@ -533,6 +563,9 @@ pre{
         flex-direction: column;
         gap:10px;
         font-size: 15px;
+    }
+    .video-transcription .section-header{
+        font-size: 24px;
     }
 }
 

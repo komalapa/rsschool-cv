@@ -131,7 +131,7 @@ pre{
     height: 50px;
     border-radius: 50%;
     background:center / 100% no-repeat url("../images/photo.jpeg") ;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 
 .job-title{
@@ -366,7 +366,7 @@ pre{
     color: var(--main-color);
 }
 
-.code-header, footer{
+.code-header, footer, .video{
     background-color: var(--main-color);
     color: var(--white);
     margin:0;
@@ -374,9 +374,28 @@ pre{
     box-sizing: border-box;
 }
 
+.video .section-header{
+    color: var(--white);
+    font-size: 32px;
+}
 
+.video-iframe{
+    width: 60vw;
+    height: 34vw;
+    margin-bottom: 35px;
+}
 
-
+.video-transcription .section-header{
+    font-size: 32px;
+    text-align: center;
+    line-height: 1;
+    word-wrap:unset;
+}
+.video-transcription p{
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1;
+}
 .github-link{
     text-decoration: none;
     font-size: 15px;
@@ -544,6 +563,9 @@ pre{
         flex-direction: column;
         gap:10px;
         font-size: 15px;
+    }
+    .video-transcription .section-header{
+        font-size: 24px;
     }
 }
 
